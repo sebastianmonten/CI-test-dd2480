@@ -13,7 +13,7 @@ def webhook():
     data = request.json
     basic_info = extract_basic_info(data)
     # Write basic information of the received JSON payload to log.txt
-    with open('log.txt', 'a') as f:
+    with open('/tmp/log.txt', 'a') as f:
         f.write(f"Received webhook payload: {basic_info}\n")
     return 'Webhook received successfully', 200
 
